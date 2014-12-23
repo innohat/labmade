@@ -17,7 +17,6 @@
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
     <link href="angular-busy.min.css" rel="stylesheet" type="text/css">
-    <script src="angular-busy.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,7 +51,7 @@
     </header>
 
     <!-- Portfolio -->
-    <section id="portfolio" class="portfolio" cg-busy="creating">
+    <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -60,11 +59,11 @@
             <hr class="small">
             <div class="row">
               <div class="col-md-6">
-                <div class="portfolio-item">
+                <div class="portfolio-item" cg-busy="creating1">
                   <div ng-click="choose1()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
                     <img src="{{place.image_url_1}}" style="width: 100%">
                   </div>
-                  <div class="place-description" ng-click="choose1()" style="padding-right: 30px;">
+                  <div class="place-description" ng-click="choose1()">
 	                <div class="btn-group btn-group-lg btn-group-justified" role="group">
                       <a class="btn btn-default" style="border-top-right-radius:0px;border-top-left-radius:0px;background-color:#E43F4A;color:#FFF">Share</a>
                     </div>
@@ -72,11 +71,11 @@
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="portfolio-item">
+                <div class="portfolio-item" cg-busy="creating2">
                   <div ng-click="choose2()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
                     <img src="{{place.image_url_2}}" style="width: 100%; ">
                   </div>
-                  <div class="place-description" ng-click="choose2()" style="padding-right: 30px;">
+                  <div class="place-description" ng-click="choose2()">
 	                <div class="btn-group btn-group-lg btn-group-justified" role="group">
                       <a class="btn btn-default" style="border-top-right-radius:0px;border-top-left-radius:0px;background-color:#E43F4A;color:#FFF">Share</a>
                     </div>
@@ -100,7 +99,7 @@
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
             <hr class="small">
-            <p class="text-muted">Copyright &copy; Your Website 2014</p>
+            <p class="text-muted">Copyright &copy; SnapViva 2014</p>
           </div>
         </div>
       </div>
@@ -172,6 +171,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="vendor/jquery.js"></script>
     <script src="js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+    <script src="angular-busy.min.js"></script>
 
     <script src="scripts/config.js"></script>
     <script src="scripts/app.js"></script>

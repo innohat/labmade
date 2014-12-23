@@ -6,6 +6,7 @@ angular.module('dood.ctrl.create', [
     'dood.doc.merchants',
     'dood.doc.photos',
     'ui.bootstrap',
+    'cgBusy'
 ])
 
 .controller('CreateCtrl', function(
@@ -88,11 +89,11 @@ angular.module('dood.ctrl.create', [
     }
 
     $scope.choose1 = function() {
-        $scope.creating = choose($scope.place.image_url_1, $scope.place.image_public_id_1);
+        $scope.creating1 = choose($scope.place.image_url_1, $scope.place.image_public_id_1);
     }
 
     $scope.choose2 = function() {
-        $scope.creating = choose($scope.place.image_url_2, $scope.place.image_public_id_2);
+        $scope.creating2 = choose($scope.place.image_url_2, $scope.place.image_public_id_2);
     }
 
     $scope.create = function(image_url, image_public_id) {
