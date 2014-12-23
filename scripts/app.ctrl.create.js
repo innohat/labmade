@@ -96,7 +96,7 @@ angular.module('dood.ctrl.create', [
     }
 
     $scope.create = function(image_url, image_public_id) {
-
+        $scope.photo.facebook_shared = true;
         var deferred = $q.defer();
         var photoDest;
 
