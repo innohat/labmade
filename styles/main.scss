@@ -1,0 +1,245 @@
+/* Your app's SASS, go crazy, make it your own */
+.ionic-logo {
+    display: block;
+    margin: 15px auto;
+    width: 96px;
+    height: 96px;
+}
+
+.bar.bar-stable .title {
+    color: #e43f4a;
+}
+
+.item {
+  border: 0px;
+  border-color: #F7C5C9;
+}
+
+.redeem {
+  text-align: right;
+}
+
+.scroll-content {
+  background-color: #ECF0F1;
+}
+
+.transparent {
+  background: transparent !important;
+}
+
+.image-modal {
+  width: 100% !important;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.item .avatar {
+  float: left;
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+  border-radius: 12px;
+}
+
+.item .name {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.item-message {
+  padding-top: 0px;
+}
+
+.friend-list {
+  padding-top: 0px;
+}
+
+.friend-holder {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px !important;
+  margin: auto;
+}
+
+.friend-avatar {
+  width: auto;
+  max-width: 40px;
+  border-radius: 20px !important;
+}
+
+.friend-name {
+  margin-left: 12px !important;
+  line-height: 40px;
+}
+
+.friend-item {
+  border-bottom-color: #dddddd !important;
+  border-bottom-width: 0px !important;
+  border-bottom-style: solid;
+  border-top-color: #dddddd !important;
+  border-top-width: 0px !important;
+  border-top-style: solid;
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+}
+
+.content-friends {
+  background-color: #FFF;
+  text-align: center;
+}
+
+.place-item {
+  border-bottom-color: #dddddd !important;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid;
+  border-top-color: #dddddd !important;
+  border-top-width: 1px !important;
+  border-top-style: solid;
+}
+
+.place-background {
+  position: relative;
+}
+
+.place-description {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+}
+
+.place-description p {
+  margin: 15px !important;
+  color: #FFF;
+  text-align: left;
+}
+
+.place-description .place-title {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.place-description .place-subtitle {
+  color: #AAA;
+}
+
+.bookmark-show-button {
+  color: #444444 !important;
+}
+
+.title {
+  color: #e43f4a !important;
+}
+
+.facebook-shared:before {
+  background: #e43f4a !important;
+  border-color: #e43f4a !important;
+}
+
+ion-content {
+  padding: 0px !important;
+}
+
+#tooltip
+{
+    text-align: center;
+    color: #fff;
+    background: #e43f4a;
+    opacity: 0.7;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+ 
+#tooltip:after /* triangle decoration */
+{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #e43f4a;
+    opacity: 0.7;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -10px;
+}
+ 
+#tooltip.top:after
+{
+    border-top-color: transparent;
+    border-bottom: 10px solid #e43f4a;
+    opacity: 0.7;
+    top: -20px;
+    bottom: auto;
+}
+ 
+#tooltip.left:after
+{
+    left: 10px;
+    margin: 0;
+}
+ 
+#tooltip.right:after
+{
+    right: 10px;
+    left: auto;
+    margin: 0;
+}
+
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+#logo {
+  margin: 30px 0px;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
+
+#lets-go-button {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+}

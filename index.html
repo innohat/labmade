@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title>SnapViva</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link href="angular-busy.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+     .image-item:hover {
+       opacity: 70%;
+     }
+    </style>
+
+  </head>
+
+  <body ng-app="dood" ng-controller="CreateCtrl" animation="slide-left-right-ios7">
+    <!-- Header -->
+    <header id="top" class="header">
+      <div class="text-vertical-center">
+        <h1>Lab Made at SnapViva</h1>
+        <h3>Upload your awesome photo and get coupons.</h3>
+        <br>
+        <input id="plain-upload-photo" style="display:none;" type="file" accept="image/*" capture="camera">
+        <a class="btn btn-dark btn-lg" ng-click="upload()">Upload Photo</a>
+      </div>
+    </header>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1 text-center">
+            <h2>Choose one from below</h2>
+            <hr class="small">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="portfolio-item">
+                  <div ng-click="choose1()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
+                    <img src="{{place.image_url_1}}" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="portfolio-item">
+                  <div ng-click="choose2()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
+                    <img src="{{place.image_url_2}}" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.row (nested) -->
+          </div>
+          <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1 text-center">
+            <hr class="small">
+            <p class="text-muted">Copyright &copy; Your Website 2014</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+     $("#menu-close").click(function(e) {
+      e.preventDefault();
+      $("#sidebar-wrapper").toggleClass("active");
+     });
+
+     // Opens the sidebar menu
+     $("#menu-toggle").click(function(e) {
+       e.preventDefault();
+       $("#sidebar-wrapper").toggleClass("active");
+     });
+
+     // Scrolls to the selected menu item on the page
+     $(function() {
+       $('a[href*=#]:not([href=#])').click(function() {
+         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+           var target = $(this.hash);
+           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+           if (target.length) {
+             $('html,body').animate({
+               scrollTop: target.offset().top
+             }, 1000);
+             return false;
+           }
+         }
+       });
+     });
+    </script>
+
+    <script type="text/ng-template" id="message.html">
+        <div class="modal-header">
+          <h3 class="modal-title">Express your love about Lab Made</h3>
+        </div>
+        <div class="modal-body">
+          <textarea ng-model="message" class="form-control" placeholder="Write down your thoughts about this place ..." rows="4"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" ng-click="ok()">Share Now</button>
+        </div>
+    </script>
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/collide/collide.js"></script>
+    <script src="bower_components/angular-data/dist/angular-data.min.js"></script>
+    <script src="bower_components/angular-cache/dist/angular-cache.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/ngStorage/src/angularLocalStorage.js"></script>
+    <script src="bower_components/pouchdb/dist/pouchdb.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="vendor/jquery.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+    <script src="angular-busy.min.js"></script>
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app.helpers.js"></script>
+    <script src="scripts/app.device.js"></script>
+    <script src="scripts/app.auth.js"></script>
+    <script src="scripts/app.doc.core.js"></script>
+    <script src="scripts/app.doc.photos.js"></script>
+    <script src="scripts/app.doc.merchants.js"></script>
+    <script src="scripts/app.doc.friends.js"></script>
+    <script src="scripts/app.ctrl.create.js"></script>
+</body>
+</html>
