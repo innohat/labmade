@@ -75,18 +75,24 @@ angular.module('dood.ctrl.create', [
             }
         });
 
+        var deferred = $q.defer();
+
         modalInstance.result.then(function(message) {
             $scope.photo.message = message;
-            $scope.create(image_url, image_public_id);
+            $scope.create(image_url, image_public_id).then(function() {
+                deferred.resolve();
+            });
         })
+
+        return deferred.promise;
     }
 
     $scope.choose1 = function() {
-        return choose($scope.place.image_url_1, $scope.place.image_public_id_1);
+        $scope.creating = choose($scope.place.image_url_1, $scope.place.image_public_id_1);
     }
 
     $scope.choose2 = function() {
-        return choose($scope.place.image_url_2, $scope.place.image_public_id_2);
+        $scope.creating = choose($scope.place.image_url_2, $scope.place.image_public_id_2);
     }
 
     $scope.create = function(image_url, image_public_id) {
@@ -94,7 +100,7 @@ angular.module('dood.ctrl.create', [
         var deferred = $q.defer();
         var photoDest;
 
-        auth.ensureLogin()
+        return auth.ensureLogin()
             .then(function() {
                 return photoUpload($scope.photoUrl, $scope.photoType, {
                     url: $scope.place.image_url,
