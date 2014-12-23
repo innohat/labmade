@@ -6,7 +6,6 @@ angular.module('dood.ctrl.create', [
     'dood.doc.merchants',
     'dood.doc.photos',
     'ui.bootstrap',
-    'cgBusy'
 ])
 
 .controller('CreateCtrl', function(
