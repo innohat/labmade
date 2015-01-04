@@ -42,55 +42,64 @@
     <!-- Header -->
     <header id="top" class="header">
       <div class="text-vertical-center">
-        <h1></h1>
-        <h3></h3>
+          <h1>&nbsp;</h1>
+          <h1>&nbsp;</h1>
+          <h1>&nbsp;</h1>
+          <h1>&nbsp;</h1>
+          <h3> </h3>
         <br>
         <input id="plain-upload-photo" style="display:none;" type="file" accept="image/*" capture="camera">
-        <a class="btn btn-dark btn-lg" ng-click="upload()">Upload Photo</a>
+        <a style="background-color:#E43F4A;" class="btn btn-dark btn-lg" ng-click="upload()">Upload A Selfie</a>
       </div>
     </header>
 
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-lg-offset-1 text-center">
-            <h2>Your LAB MADE coupon is created</h2>
-            <hr class="small">
+        <div class="container">
             <div class="row">
-              <div class="col-md-6">
-                <div class="portfolio-item" cg-busy="creating1">
-                  <div ng-click="choose1()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
-                    <img src="{{place.image_url_1}}" style="width: 100%">
-                  </div>
-                  <div class="place-description" ng-click="choose1()">
-	                <div class="btn-group btn-group-lg btn-group-justified" role="group">
-                      <a class="btn btn-default" style="border-top-right-radius:0px;border-top-left-radius:0px;background-color:#E43F4A;color:#FFF">Share</a>
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Your LAB MADE coupon is created</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item" cg-busy="creating1">
+                                <div ng-click="choose1()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
+                                    <img src="{{place.image_url_1}}" style="width: 100%">
+                                </div>
+                                <div style="margin-top:10px;" class="place-description" ng-click="choose1()">
+	                            <div class="btn-group btn-group-lg" role="group">
+                                        <a class="btn btn-default" style="padding-top:18px;padding-bottom:18px;padding-right:50px;padding-left:50px;font-size:18px;border-radius:0px;background-color:#E43F4A;color:#FFF">Share</a>
+                                    </div><br>
+                                    <span style="font-size:16px;color:#BBB;">to create coupon for friends!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item" cg-busy="creating2">
+                                <div ng-click="choose2()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
+                                    <img src="{{place.image_url_2}}" style="width: 100%; ">
+                                </div>
+                                <div style="margin-top:10px;" class="place-description" ng-click="choose2()">
+	                            <div class="btn-group btn-group-lg" role="group">
+                                        <a class="btn btn-default" style="padding-top:18px;padding-bottom:18px;padding-right:50px;padding-left:50px;font-size:18px;border-radius:0px;background-color:#E43F4A;color:#FFF">Share</a>
+                                    </div><br>
+                                    <span style="font-size:16px;color:#BBB;">to create coupon for friends!</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <!-- /.row (nested) -->
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="portfolio-item" cg-busy="creating2">
-                  <div ng-click="choose2()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
-                    <img src="{{place.image_url_2}}" style="width: 100%; ">
-                  </div>
-                  <div class="place-description" ng-click="choose2()">
-	                <div class="btn-group btn-group-lg btn-group-justified" role="group">
-                      <a class="btn btn-default" style="border-top-right-radius:0px;border-top-left-radius:0px;background-color:#E43F4A;color:#FFF">Share</a>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+                <!-- /.col-lg-10 -->
             </div>
-            <!-- /.row (nested) -->
-          </div>
-          <!-- /.col-lg-10 -->
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
+        <!-- /.container -->
+    </section>
+
+    <section style="text-align:center;margin-top:80px;background-color:#444;color:#FFF;padding-top:40px;padding-bottom:40px;">
+        <h1>Bring the photo coupon to LAB MADE for HKD5 off</h1>
+        <h3>ASIA'S FIRST LIQUID NITROGEN ICE CREAM LABORATORY</h3>
     </section>
 
     <!-- Footer -->
@@ -98,7 +107,6 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
-            <hr class="small">
             <p class="text-muted">Copyright &copy; SnapViva 2014</p>
           </div>
         </div>
