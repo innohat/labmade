@@ -52,7 +52,7 @@ angular.module('dood.ctrl.create', [
     plainUpload.error(function(response) {
     });
 
-    merchantDb.find('4')
+    merchantDb.find('6')
         .then(function(place) {
             $scope.place = place;
             $scope.photo.message = place.default_message;
