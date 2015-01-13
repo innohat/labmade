@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <title>SnapViva</title>
 
@@ -13,32 +14,26 @@
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
 
     <link href="angular-busy.min.css" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+        queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+        </script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style>
-     .image-item:hover {
-       opacity: 70%;
-     }
-
-     .place-description {
-       position: absolute;
-       width: 100%;
-     }
-    </style>
-
   </head>
 
-  <body ng-app="dood" ng-controller="CreateCtrl" animation="slide-left-right-ios7">
+  <body ng-app="dood" ng-controller="CreateCtrl"
+        animation="slide-left-right-ios7">
     <!-- Header -->
     <header id="top" class="header">
       <div class="text-vertical-center">
@@ -48,12 +43,13 @@
           <h1>&nbsp;</h1>
           <h3> </h3>
         <br>
-        <input id="plain-upload-photo" style="display:none;" type="file" accept="image/*" capture="camera">
-        <a style="background-color:#E43F4A;" class="btn btn-dark btn-lg" ng-click="upload()">Upload A Selfie</a>
+        <input id="plain-upload-photo" type="file" accept="image/*"
+               capture="camera">
+        <a id="plain-upload-button" class="btn btn-dark btn-lg"
+           ng-click="upload()">Upload A Selfie</a>
       </div>
     </header>
 
-    <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
@@ -63,27 +59,39 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item" cg-busy="creating1">
-                                <div ng-click="choose1()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
-                                    <img src="{{place.image_url_1}}" style="width: 100%">
+                                <div ng-click="choose1()" class="image-item"
+                                     href="#"
+                                     ng-style="{'background-image':'url(' + photoUrl + ')'}">
+                                    <img src="{{place.image_url_1}}">
                                 </div>
-                                <div style="margin-top:10px;" class="place-description" ng-click="choose1()">
-	                            <div class="btn-group btn-group-lg" role="group">
-                                        <a class="btn btn-default" style="padding-top:18px;padding-bottom:18px;padding-right:50px;padding-left:50px;font-size:18px;border-radius:0px;background-color:#E43F4A;color:#FFF">Share</a>
+                                <div class="place-description"
+                                     ng-click="choose1()">
+	                            <div class="btn-group btn-group-lg"
+                                         role="group">
+                                        <a class="share btn btn-default">
+                                            Share
+                                        </a>
                                     </div><br>
-                                    <span style="font-size:16px;color:#BBB;">to create coupon for friends!</span>
+                                    <span>to create coupon for friends!</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item" cg-busy="creating2">
-                                <div ng-click="choose2()" class="image-item" href="#" ng-style="{'background-image':'url(' + photoUrl + ')', 'background-size': '100% 100%'}">
-                                    <img src="{{place.image_url_2}}" style="width: 100%; ">
+                                <div ng-click="choose2()" class="image-item"
+                                     href="#"
+                                     ng-style="{'background-image':'url(' + photoUrl + ')'}">
+                                    <img src="{{place.image_url_2}}">
                                 </div>
-                                <div style="margin-top:10px;" class="place-description" ng-click="choose2()">
-	                            <div class="btn-group btn-group-lg" role="group">
-                                        <a class="btn btn-default" style="padding-top:18px;padding-bottom:18px;padding-right:50px;padding-left:50px;font-size:18px;border-radius:0px;background-color:#E43F4A;color:#FFF">Share</a>
+                                <div class="place-description"
+                                     ng-click="choose2()">
+	                            <div class="btn-group btn-group-lg"
+                                         role="group">
+                                        <a class="share btn btn-default">
+                                            Share
+                                        </a>
                                     </div><br>
-                                    <span style="font-size:16px;color:#BBB;">to create coupon for friends!</span>
+                                    <span>to create coupon for friends!</span>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +105,7 @@
         <!-- /.container -->
     </section>
 
-    <section style="text-align:center;margin-top:80px;background-color:#444;color:#FFF;padding-top:40px;padding-bottom:40px;">
+    <section id="deal-description">
         <h1>Bring the photo coupon to LAB MADE for HKD5 off</h1>
         <h3>ASIA'S FIRST LIQUID NITROGEN ICE CREAM LABORATORY</h3>
     </section>

@@ -237,3 +237,53 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+
+/* Additional Styles */
+
+.image-item:hover {
+    opacity: 70%;
+    background-size: 100% 100%;
+}
+
+.place-description {
+    position: absolute;
+    width: 100%;
+    margin-top: 10px; 
+}
+
+.place-description span {
+    font-size:16px;
+    color:#BBB;
+}
+
+#plain-upload-photo {
+    display: none;
+}
+
+#plain-upload-button {
+    background-color: #E43F4A;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.share {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 18px;
+    border-radius: 0px;
+    background-color: #E43F4A;
+    color: #FFF;
+}
+
+#deal-description {
+    text-align: center;
+    margin-top: 80px;
+    background-color: #444;
+    color: #FFF;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
