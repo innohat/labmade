@@ -89,7 +89,7 @@ angular.module('dood.ctrl.create', [
     }
 
     $scope.choose1 = function() {
-        $scope.creating1 = choose($scope.place.image_url_1, $scope.place.image_public_id_1);
+        $scope.creating1 = choose($scope.place.image_url, $scope.place.image_public_id);
     }
 
     $scope.choose2 = function() {
