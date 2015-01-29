@@ -91,7 +91,20 @@
     <section id="deal-description">
         <h1>Bring the photo coupon to LAB MADE for HKD5 off</h1>
         <h3>ASIA'S FIRST LIQUID NITROGEN ICE CREAM LABORATORY</h3>
-        <a class="btn btn-dark btn-lg red-button">Download<br>SnapViva</a><br>
+        <script>
+          function downloadSnapViva() {
+          var isAndroid = navigator.userAgent.match(/Android/i)
+          , isIOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+          if(isAndroid) {
+          location.href = 'https://play.google.com/store/apps/details?id=com.innohat.snapilot&hl=en';
+          } else if(isIOS) {
+          location.href = 'https://itunes.apple.com/us/app/snapviva/id741662888?mt=8';
+          } else {
+          location.href = 'http://www.snapviva.com/';
+          }
+          })();
+        </script>
+        <a class="btn btn-dark btn-lg red-button" onclick="downloadSnapViva()">Download<br>SnapViva</a><br>
         <span class="sub-text-after-button">to redeem the discount</span>
         <div class="row final-row">
           <a href="mailto:snapviva@innohat.com">
